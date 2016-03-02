@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+      >
+    <h:head>
+        <title>Facelet Title</title>
+        <!-- <h:outputStylesheet name="css/jsfcrud.css"/> -->
+        <h:outputStylesheet name="css/cssFormulario.css"/>
+    </h:head>
+    <h:body>
+        <section class="contenedorLogin">
+            <h:form class="formulario">
+                <h2>Acceso de usuario</h2>
+                <p>Llene el siguiente formulario para ingresar al sistema</p>
+                <p><h:inputText pt:placeholder="Usuario" value="#{loginBean.username}"></h:inputText> </p>
+                <p><h:inputSecret pt:placeholder="Contraseña" value="#{loginBean.password}"/> </p>
+                <h:messages infoStyle="color:blue; list-style: none" errorStyle="color:red; list-style:none;"/>
+                <section class="seccionBotones">
+                    <a href="#">Registrate</a>
+                    <h:commandButton value="Ingresar" action="#{loginBean.login()}"></h:commandButton>
+                </section>
+            </h:form>
+        </section>
+        
+        Hello from Facelets
+        <br />
+        <h:link outcome="/folder/admin/List" value="Show All Admin Items"/>
+    </h:body>
+
+</html>
+
